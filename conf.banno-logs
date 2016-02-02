@@ -1,0 +1,56 @@
+# grcat config file for logs
+regexp=^.*$
+colour=bright_blue
+skip=no
+count=line
+#-
+#regexp=\[([^\]]*)]
+#colours=bright_blue,cyan
+#skip=no
+#count=more
+#-
+#regexp=\[(INFO)\]
+#colours=bright_blue,bright_blue
+#skip=no
+#count=line
+#-
+#regexp=\[(WARN)\]
+#colours=bright_blue,yellow
+#skip=no
+#count=line
+#-
+#regexp=\[(ERROR)\]
+#colours=bright_blue,red
+#skip=no
+#count=line
+#-
+#regexp=akka\.tcp[^ ]+ 
+#colours=green
+#skip=no
+#-
+#regexp=\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2},\d{3})\]
+#colours=bright_blue,"\033[38;5;95m"
+#skip=no
+-
+regexp=\[[^\]]*\] \[([^\]]*)\] \[([^\]]*)\] (.*): .*
+colors=bright_blue,"\033[38;5;250m",green, cyan
+skip=no
+#-
+#regexp=\] ([a-zA-Z_.]+) :
+#colours=bright_blue,bright_blue
+#skip=no
+-
+regexp=\[(DEBUG)\]
+colours=bright_blue,"\033[38;5;32m"
+skip=no
+count=line
+-
+regexp=[\(|,] *([^,\(]+) *=
+colours=bright_blue,"\033[38;5;239m"
+skip=no
+count=more
+-
+regexp=, *([^0-9][^=]+)=
+colours=bright_blue,"\033[38;5;239m"
+skip=no
+count=more
